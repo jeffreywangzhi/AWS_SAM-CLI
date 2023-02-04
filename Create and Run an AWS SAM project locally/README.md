@@ -54,4 +54,4 @@ $ curl [RESPONSE_PATH_FROM_PREVIOUS_STEP]
 
 ## Author <a name = "author"></a>
 
-- Jeffrey Wang ( Jeffrey.wanggg@gmail.com )
+- Jeffrey Wang (Jeffrey.wanggg@gmail.com)

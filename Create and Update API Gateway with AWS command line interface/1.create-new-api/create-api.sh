@@ -1,0 +1,1 @@
+aws apigatewayv2 import-api --body file://api-schema.json
