@@ -1,0 +1,119 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "dev-api",
+    "version" : "2022-10-04 07:32:22UTC"
+  },
+  "servers" : [ {
+    "url" : "https://test.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/processes" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /processes"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${account-id}:function:test-query-all-jobs/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /processes"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${account-id}:function:test-create-job-trigger/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    },
+    "/processes/{session_id}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /processes/{session_id}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${account-id}:function:test-get-job-status/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "session_id",
+        "in" : "path",
+        "description" : "Generated path parameter for session_id",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/processes/{session_id}/download" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /processes/{session_id}/download"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${account-id}:function:test-get-dl-link/invocations",
+          "connectionType" : "INTERNET"
+        }
+      },
+      "parameters" : [ {
+        "name" : "session_id",
+        "in" : "path",
+        "description" : "Generated path parameter for session_id",
+        "required" : true,
+        "schema" : {
+          "type" : "string"
+        }
+      } ]
+    },
+    "/create-job-record-only" : {
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /create-job-record-only"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:us-east-1:lambda:path/2015-03-31/functions/arn:aws:lambda:us-east-1:${account-id}:function:test-create-job-record-only/invocations",
+          "connectionType" : "INTERNET"
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-cors" : {
+    "allowMethods" : [ "*" ],
+    "maxAge" : 0,
+    "allowCredentials" : false
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}

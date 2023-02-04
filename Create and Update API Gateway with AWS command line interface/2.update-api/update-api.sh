@@ -1,0 +1,1 @@
+aws apigatewayv2 reimport-api --api-id XXXXXX --body file://dev-api-schema.json
