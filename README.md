@@ -5,6 +5,5 @@ AWS SAM CLI command repository.
 - 2023/02/04: Create and Update API Gateway with AWS command line interface.
 - 2023/02/04: Create and Update Lambda function with AWS command line interface.
 
-## Author <a name = "author"></a>
-
-- Jeffrey Wang (Jeffrey.wanggg@gmail.com)
+## Who do I talk to <a name = "author"></a>
+- Jeffrey Wang (jeffrey.wanggg@gmail.com)
