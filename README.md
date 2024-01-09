@@ -6,4 +6,4 @@ AWS SAM CLI command repository.
 - 2023/02/04: Create and Update Lambda function with AWS command line interface.
 
 ## Who do I talk to <a name = "author"></a>
-- Jeffrey Wang (jeffrey.wanggg@gmail.com)
+- Jeffrey Wang (jeffreywangzhi@gmail.com)
